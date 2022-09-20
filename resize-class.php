@@ -94,11 +94,11 @@
 						$optimalWidth = $newWidth;
 						$optimalHeight= $newHeight;
 						break;
-					case 'portrait':
+					case 'height':
 						$optimalWidth = $this->getSizeByFixedHeight($newHeight);
 						$optimalHeight= $newHeight;
 						break;
-					case 'landscape':
+					case 'width':
 						$optimalWidth = $newWidth;
 						$optimalHeight= $this->getSizeByFixedWidth($newWidth);
 						break;
@@ -135,13 +135,13 @@
 			private function getSizeByAuto($newWidth, $newHeight)
 			{
 				if ($this->height < $this->width)
-				// *** Image to be resized is wider (landscape)
+				// *** Image to be resized is wider (width)
 				{
 					$optimalWidth = $newWidth;
 					$optimalHeight= $this->getSizeByFixedWidth($newWidth);
 				}
 				elseif ($this->height > $this->width)
-				// *** Image to be resized is taller (portrait)
+				// *** Image to be resized is taller (height)
 				{
 					$optimalWidth = $this->getSizeByFixedHeight($newHeight);
 					$optimalHeight= $newHeight;

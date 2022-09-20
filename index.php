@@ -6,7 +6,7 @@
 	// *** 1) Initialise / load image
 	$resizeObj = new resize('sample.jpg');
 
-	// *** 2) Resize image (options: exact, portrait, landscape, auto, crop)
+	// *** 2) Resize image (options: exact, height, width, auto, crop)
 	$resizeObj -> resizeImage(200, 200, 'crop');
 
 	// *** 3) Save image
